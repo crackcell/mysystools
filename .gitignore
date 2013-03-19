@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+
+findproc/findproc
+findproc/findproc_d
+killproc/killproc
+killproc/killproc_d

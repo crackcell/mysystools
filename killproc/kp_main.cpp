@@ -68,8 +68,9 @@ int kp_main() {
             continue;
         }
         linkpath[n - 0] = '\0';
-        if (0 == strncmp(linkpath, g_conf.file, sizeof(linkpath))) {
-            printf("pid: %s\n", dir->d_name);
+        if (0 != strncmp(linkpath, g_conf.file, sizeof(linkpath))) {
+            //printf("pid: %s\n", dir->d_name);
+            continue;
         }
 
         char *endptr;
@@ -78,8 +79,8 @@ int kp_main() {
             fprintf(stderr, "invalid pid: %s\n", dir->d_name);
             exit(1);
         }
-        printf("%d\n", pid);
-        if (-1 == kill(pid, SIGKILL)) {
+        printf("killing %d\n", pid);
+        if (-1 == kill(pid, g_conf.signal_value)) {
             fprintf(stderr, "kill error: %s\n", strerror(errno));
             exit(1);
         }

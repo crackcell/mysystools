@@ -25,6 +25,7 @@
 
 struct kp_conf {
     char file[PATH_MAX];
+    int signal_value;
 };
 
 #endif /* _KP_CONF_H_ */

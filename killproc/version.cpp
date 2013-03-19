@@ -41,8 +41,10 @@ void show_help() {
     printf("Usage: killproc [OPTION] PID\n"
            "Kill process with given executable file.\n\n"
            "Options:\n"
-           " -h     display this help and exit\n"
-           " -v     display version info and exit\n");
+           " -s SIGNAL_VALUE   send SIGNAL_VALUE to process, -l for signal table\n"
+           " -l                display signal table\n"
+           " -h                display this help and exit\n"
+           " -v                display version info and exit\n");
 }
 
 /* vim: set expandtab shiftwidth=4 tabstop=4: */

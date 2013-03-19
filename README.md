@@ -6,7 +6,9 @@ Some linux command line utilities.
 > Kill process with given executable file.
 > 
 > Options:
+
 >  -h     display this help and exit
+
 >  -v     display version info and exit
 
 ## killproc

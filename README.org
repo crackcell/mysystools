@@ -8,7 +8,7 @@
 
 * mysysutils
   Some linux command line utilities.
-** findproc: find pid by the exe file path.
+** findproc: find pid by the exe file path
 #+BEGIN_VERSE
 Usage: killproc [OPTION] PID
 Kill process with given executable file.
@@ -17,7 +17,7 @@ Options:
  -h     display this help and exit
  -v     display version info and exit
 #+END_VERSE
-** killproc: kill a running process by the exe file path.
+** killproc: kill a running process by the exe file path
 #+BEGIN_VERSE
 Usage: killproc [OPTION] PID
 Kill process with given executable file.

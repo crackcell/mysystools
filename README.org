@@ -11,7 +11,7 @@
 ** findproc
    find pid by the exe file path.
 #+BEGIN_QUOTE
-Usage: killproc [OPTION] PID
+Usage: killproc [OPTION] PID \\
 Kill process with given executable file.
 
 Options:

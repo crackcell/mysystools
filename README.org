@@ -1,0 +1,12 @@
+# -*- mode: org -*-
+
+#+TITLE: mysysutils
+#+AUTHOR: Tan Menglong
+#+EMAIL: tanmenglong AT gmail DOT com
+#+DATE: Wed Mar 20 03:42:40 2013
+#+STYLE: <link rel="stylesheet" type="text/css" href="http://blog.crackcell.com/static/org-mode/org-mode.css" />
+
+* mysysutils
+  Some linux command line utilities.
+  - findproc: find pid by the exe file path.
+  - killproc: kill a running process by the exe file path.

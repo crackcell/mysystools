@@ -12,9 +12,11 @@
 .PHONY : all clean
 
 all :
-	make -C killporc
+	make -C killproc
+	make -C findproc
 #	make -C unittest
 
 clean :
 	make clean -C killproc
+	make clean -C findproc
 #	make clean -C unittest

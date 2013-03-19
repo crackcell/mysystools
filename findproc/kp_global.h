@@ -9,24 +9,22 @@
  *
  **************************************************************/
 
-#ifndef _KP_CONF_H_
-#define _KP_CONF_H_
+#ifndef _KP_GLOBAL_H_
+#define _KP_GLOBAL_H_
 
 /**
  * 
  *
- * @file kp_conf.h
+ * @file kp_global.h
  * @author Menglong TAN <tanmenglong@gmail.com>
- * @date Tue Mar 19 12:16:45 2013
+ * @date Tue Mar 19 12:19:58 2013
  *
  **/
 
-#include <linux/limits.h>
+#include "kp_conf.h"
 
-struct kp_conf {
-    char file[PATH_MAX];
-};
+extern struct kp_conf g_conf;
 
-#endif /* _KP_CONF_H_ */
+#endif /* _KP_GLOBAL_H_ */
 
 /* vim: set expandtab shiftwidth=4 tabstop=4: */

@@ -11,13 +11,13 @@
 
 include ../Makefile.env
 
-MODULE = killproc
+MODULE = findproc
 VERSION = $(shell git log --name-status HEAD^..HEAD | grep commit | cut -f 2 -d " ")
 
 CQ_ROOT = ../..
 DA_ROOT = ../
 
-BUILD_TARGETS = killproc killproc_d
+BUILD_TARGETS = findproc findproc_d
 
 INC = -I$(DA_ROOT) -I$(ZHUHAI)/output/include
 LIB = 
@@ -32,12 +32,12 @@ OBJ_DEBUG = $(patsubst %.cpp, %_d.o, $(SRC))
 all : $(BUILD_TARGETS)
 
 check : all
-	valgrind --leak-check=full --show-reachable=yes ./killproc_d
+	valgrind --leak-check=full --show-reachable=yes ./findproc_d
 
-killproc : $(OBJ)
+findproc : $(OBJ)
 	$(CXX) -o $@ $^ $(LIB)
 
-killproc_d : $(OBJ_DEBUG)
+findproc_d : $(OBJ_DEBUG)
 	$(CXX) -o $@ $^ $(LIB_DEBUG)
 
 clean :

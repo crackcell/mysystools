@@ -26,7 +26,6 @@
 #include <string.h>
 #include <ctype.h>
 #include <limits.h>
-#include <signal.h>
 
 #include "kp_global.h"
 #include "kp_main.h"
@@ -69,20 +68,9 @@ int kp_main() {
         }
         linkpath[n - 0] = '\0';
         if (0 == strncmp(linkpath, g_conf.file, sizeof(linkpath))) {
-            printf("pid: %s\n", dir->d_name);
+            printf("%s\n", dir->d_name);
         }
-
-        char *endptr;
-        pid_t pid = strtol(dir->d_name, &endptr, 10);
-        if (LONG_MIN == pid) {
-            fprintf(stderr, "invalid pid: %s\n", dir->d_name);
-            exit(1);
-        }
-        printf("%d\n", pid);
-        if (-1 == kill(pid, SIGKILL)) {
-            fprintf(stderr, "kill error: %s\n", strerror(errno));
-            exit(1);
-        }
+        //printf("%s\n", linkpath);
     }
 
     closedir(d);

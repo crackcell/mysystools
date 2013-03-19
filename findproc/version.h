@@ -9,24 +9,21 @@
  *
  **************************************************************/
 
-#ifndef _KP_CONF_H_
-#define _KP_CONF_H_
+#ifndef _VERSION_H_
+#define _VERSION_H_
 
 /**
  * 
  *
- * @file kp_conf.h
+ * @file version.h
  * @author Menglong TAN <tanmenglong@gmail.com>
- * @date Tue Mar 19 12:16:45 2013
+ * @date Sat Mar  2 00:17:57 2013
  *
  **/
 
-#include <linux/limits.h>
+void show_version();
+void show_help();
 
-struct kp_conf {
-    char file[PATH_MAX];
-};
-
-#endif /* _KP_CONF_H_ */
+#endif /* _VERSION_H_ */
 
 /* vim: set expandtab shiftwidth=4 tabstop=4: */
